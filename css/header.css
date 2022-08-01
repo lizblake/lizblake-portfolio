@@ -6,13 +6,30 @@
     font-size: 48px;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png");
     background-repeat: repeat-x;
-    animation: 1s parallel infinite linear;
+    animation: 
+    30s parallel infinite linear,
+    nudge 5s linear infinite alternate;
   }
   @keyframes parallel {
     100% {
       background-position: -5000px 20%;
     }
   }
+  @keyframes nudge {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    
+    50% {
+      transform: translate(150px, 0);
+    }
+    
+    80% {
+      transform: translate(-150px, 0);
+    }
+  }
+
+
   /* Style the header links */
   .folio-header a {
     float: left;
