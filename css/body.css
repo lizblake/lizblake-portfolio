@@ -1,0 +1,28 @@
+.folio-body {
+    overflow: hidden;
+    padding: 20px 10px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 48px;
+    background-repeat: repeat-x;
+    animation: 
+    30s parallel infinite linear,
+    nudge 5s linear infinite alternate;
+  }
+  @keyframes parallel {
+    100% {
+      background-position: -5000px 20%;
+    }
+  }
+  @keyframes nudge {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    
+    50% {
+      transform: translate(150px, 0);
+    }
+    
+    80% {
+      transform: translate(-150px, 0);
+    }
+  }
